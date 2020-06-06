@@ -1,0 +1,141 @@
+<%= render partial: "top/top" %>
+<div class="message-main">
+  <div class="chat">
+
+    <div class="chat-side">
+      <div class="chat-side__header">
+        <div class="chat-side__header-title">
+          <h1 class="chat-side__header-username">
+          <% if current_user then%>
+          <%= current_user.name %>
+          <% elsif current_store %>
+          <%= current_store.name %>
+          <% else %>
+          <h1>仮</h1>
+          <% end %>
+          </h1>
+          <li class="chat-side__header-list">
+            <% if current_user then%>
+              <%= link_to edit_user_path(current_user) do %>
+                <%= icon('fas', 'user-cog', class: 'icon') %>
+              <% end %>
+            <% elsif current_store %>
+              <%= link_to edit_store_path(current_store) do %>
+                <%= icon('fas', 'user-cog', class: 'icon') %>
+              <% end %>
+            <% else %>
+              <h1>仮</h1>
+            <% end %>
+          </li>
+        </div>
+      </div>
+      <div class="chat-side__main">
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+        <div class="chat-side__main-store">
+          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
+          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
+        </div>
+      </div>
+    </div>
+    
+    <div class="chat-main">
+
+      <div class="chat-main__header">
+        <div class="chat-main__header-title">
+          <h1 class="chat-main__header-store">ABCDEFGHI店</h1>
+        </div>
+      </div>
+
+      <div class="chat-main__body">
+
+        <div class="line">
+          <div class="line__text">
+            <%= image_tag 'sketto-shop-icon.png', class: 'line__text-icon' %>
+            <p class="line__text-data">2020/01/01</p>
+          </div>
+          <p class="line__message">ご連絡いただきありがとうございます！！！</p>
+        </div>
+
+        <div class="return-line">
+          <div class="return-line__text">
+            <%= image_tag 'sketto-staff_icon.png', class: 'return-line__text-icon' %>
+            <p class="return-line__text-data">2020/01/01</p>
+          </div>
+          <p class="return-line__message">ご連絡いただきありがとうございます！！！</p>
+        </div>
+
+        <div class="line">
+          <div class="line__text">
+            <%= image_tag 'sketto-shop-icon.png', class: 'line__text-icon' %>
+            <p class="line__text-data">2020/01/01</p>
+          </div>
+          <p class="line__message">ご連絡いただきありがとうございます！！！</p>
+        </div>
+
+        <div class="return-line">
+          <div class="return-line__text">
+            <%= image_tag 'sketto-staff_icon.png', class: 'return-line__text-icon' %>
+            <p class="return-line__text-data">2020/01/01</p>
+          </div>
+          <p class="return-line__message">ご連絡いただきありがとうございます！！！</p>
+        </div>
+
+        <div class="line">
+          <div class="line__text">
+            <%= image_tag 'sketto-shop-icon.png', class: 'line__text-icon' %>
+            <p class="line__text-data">2020/01/01</p>
+          </div>
+          <p class="line__message">ご連絡いただきありがとうございます！！！</p>
+        </div>
+
+        <div class="return-line">
+          <div class="return-line__text">
+            <%= image_tag 'sketto-staff_icon.png', class: 'return-line__text-icon' %>
+            <p class="return-line__text-data">2020/01/01</p>
+          </div>
+          <p class="return-line__message">ご連絡いただきありがとうございます！！！</p>
+        </div>
+
+      </div>
+
+
+      <div class="chat-main__message">
+          <input class="chat-main__message__text" type="text" >
+          <input class="chat-main__message__btn" type="submit" value="送信" >
+      </div>
+
+    </div>
+
+  </div>
+</div>

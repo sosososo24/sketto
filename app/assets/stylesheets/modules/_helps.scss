@@ -1,0 +1,179 @@
+.help-main {
+  width: 100%;
+  padding-top: 64px;
+  background-color: #fffaf0;
+  display: flex;
+  .sidebar {
+    width: 340px;
+    margin-left: 64px;
+    &__body {
+      width: 300px;
+      height: 400px;
+      margin-top: 100px;
+      position: fixed;
+      background-color: whitesmoke;
+      border-radius: 20px;
+      box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)!important;
+      &-title {
+        width: 200px;
+        height: 30px;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .search {
+        overflow: hidden;
+        width: 220px;
+        margin: 2em auto;
+        text-align: center;
+      }
+      .search select {
+        width: 100%;
+        padding-right: 1em;
+        cursor: pointer;
+        text-indent: 0.01px;
+        text-overflow: ellipsis;
+        border: none;
+        outline: none;
+        background: transparent;
+        background-image: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .search select::-ms-expand {
+          display: none;
+      }
+      .search.search_bar {
+        position: relative;
+        border-radius: 2px;
+        border: 2px solid #a0522d;
+        border-radius: 50px;
+        background: #ffffff;
+      }
+      .search.search_bar::before {
+        position: absolute;
+        top: 0.8em;
+        right: 0.8em;
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #a0522d;
+        pointer-events: none;
+      }
+      .search.search_bar select {
+        padding: 8px 38px 8px 8px;
+        color: #a0522d;
+      }
+      .side_btn {
+        width: 220px;
+        height: 200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        &__btn1 {
+          height: 42px;
+          background-color: #a0522d;
+          color: whitesmoke;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+        &__btn2 {
+          margin-top: 20px;
+          height: 42px;
+          background-color: #dcdcdc;
+          color: black;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .help {
+    width: 1020px;
+    margin-top: 30px;
+    &__title {
+      height: 50px;
+      text-align: center;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 50px;
+    }
+    &__list {
+      width: 300px;
+      height: 400px;
+      background-color: #d3d3d3;
+      margin: 20px;
+      border-radius: 30px;
+      box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)!important;
+      float: left;
+      &-store {
+        width: 270px;
+        height: 30px;
+        margin: 10px auto;
+        text-align: center;
+        font-weight: bold;
+        line-height: 30px;
+      }
+    }
+    &__list__table {
+      width: 280px;
+      height: 250px;
+      margin: 0 auto;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      overflow: scroll;
+      &-data {
+        padding: 0.5em;
+        list-style: none;
+      }
+      &-data li {
+        position: relative;
+        padding: 0.5em 1em 0.5em 2.3em;
+        margin-bottom:5px;
+      }
+      &-data li:after,
+      &-data li:before {
+        content:'';
+        position: absolute;
+        transform: rotate(45deg);
+      }
+      &-data li:before {
+        top: 0.7em;
+        left: 0.2em;
+        width: 12px;
+        height: 12px;
+      }
+      &-data li:after {
+        top: 0.9em;
+        left: 0.7em;
+        width: 14px;
+        height: 14px;
+        background: #ffdab9;
+        transform: rotate(60deg);
+      }
+    }
+    &__list__btn{
+      width: 250px;
+      height: 50px;
+      margin: 0 auto;
+      display: flex;
+      &-btn1 {
+        width: 250px;
+        height: 42px;
+        margin-top: 30px;
+        background-color: #deb887;
+        color: whitesmoke;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+<%= render partial: "top" %>
+<div class="main">
+  <%= render 'layouts/notifications' %>
+  <%= image_tag 'sketto_main.jpg', class: 'main__image' %>
+  <h1 class="main__message1">Sketto for all</h1>
+  <h2 class="main__message2">みんなはみんなの助っ人</h2>
+</div>
+
+<div class="system">
+  <h1 class="system__title">『sketto』 とは？</h1>
+  <%= image_tag 'sketto_system.png', class: 'system__image' %>
+</div>
+
+<div class="about">
+  <p class="about__text">『sketto』とは、すき間時間を活用して働きたいという従業員と、<br>人手を必要としている店舗をマッチングするサービスです。
+</div>
+
+<div class="system">
+  <h1 class="system__title">利用方法（従業員）</h1>
+</div>
+
+<div class="step">
+  <div class="step__top">
+      <span class="step__title">❶Help検索</span>
+      <%= image_tag 'sketto_question.png', class: 'step__image' %>
+      <p class="step__text">
+      skettoには、店舗から人手を必要としている日程が日々登録されます。<br>都合の良い時間や場所など、いろいろな条件で検索してみましょう。
+      </p>
+  </div>
+  <div class="step__top">
+      <span class="step__title">❷Help内容確認</span>
+      <%= image_tag 'sketto_checklist.png', class: 'step__image' %>
+      <p class="step__text">
+      都合の良い日程が見つかったら、内容を確認しメッセージを送りましょう。<br>不明な点や質問があれば、店舗担当者に足して直接確認ができます。
+      </p>
+  </div>
+  <div class="step__top">
+      <span class="step__title">❸Message</span>
+      <%= image_tag 'sketto_team.png', class: 'step__image' %>
+      <p class="step__text">
+      チャットで店舗の担当者とメッセージでやりとりしましょう。<br>あとは返信を待つだけです！！！！！！！！<br>メッセージを送るには登録が必要です。
+      </p>
+  </div>
+</div>
+
+<div class="system">
+  <h1 class="system__title">利用方法（店舗）</h1>
+</div>
+
+<div class="step">
+  <div class="step__top">
+      <span class="step__title">❶Help登録</span>
+      <%= image_tag 'help_store.png', class: 'step__image' %>
+      <p class="step__text">
+      skettoでは、人手を必要としている日程が日々登録できます。<br>登録をして、人手が必要な日程・時間を登録しましょう。
+      </p>
+  </div>
+  <div class="step__top">
+      <span class="step__title">❷Message確認</span>
+      <%= image_tag 'checklist_store.png', class: 'step__image' %>
+      <p class="step__text">
+      都合が合う従業員からメッセージが届きます。<br>メッセージの内容を確認しましょう。
+      </p>
+  </div>
+  <div class="step__top">
+      <span class="step__title">❸Message</span>
+      <%= image_tag 'message_store.png', class: 'step__image' %>
+      <p class="step__text">
+      チャットで従業員とメッセージでやりとりしましょう。条件や情報を伝えましょう。<br>Help登録・メッセージを送るには登録が必要です。
+      </p>
+  </div>
+</div>
+
+<div class="register">
+  <div class="register__title">\登録・検索・メッセージはこちらから/</div>
+  <%= link_to '新規登録', '#', class: "register__button" %>
+  <%= link_to 'Help検索', '/helps/index', class: "register__button" %>
+  <%= link_to 'message', '/messages/index', class: "register__button" %>
+</div>
+
+<div class="footer">
+  <p>COPYRIGHT © sketto ALL RIGHTS RESERVED.</p>
+  
+</div>

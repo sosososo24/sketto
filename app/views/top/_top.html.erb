@@ -1,0 +1,19 @@
+<div class="header">
+  <%= link_to image_tag("sketto.png", class:"header__logo"), "/" %>
+  <div class="header__menu">
+    <%= link_to 'Help検索', '/helps/index', class: "header__menu-list" %>
+    <%= link_to 'message', '/messages/index', class: "header__menu-list" %>
+    <% if user_signed_in? %>
+      <%= link_to '新規登録', '/users/sign_up', class: "header__menu-btn1" %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__menu-btn2' %>
+    <% else%>
+      <%= link_to '新規登録', '/users/sign_up', class: "header__menu-btn1" %>
+      <%= link_to 'ログイン', '/users/sign_in', class: "header__menu-btn1" %>
+    <% end %>
+    <% if store_signed_in? %>
+    <%= link_to '店舗ログアウト', destroy_store_session_path, method: :delete, class: 'header__menu-btn3' %>
+    <% else %>
+    <%= link_to "店舗専用", '/stores/sign_up', class:'header__menu-btn4' %>
+    <% end %>
+  </div>
+</div>

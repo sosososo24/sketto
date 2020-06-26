@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
+- Sketto
 
-Things you may want to cover:
+# アプリケーションの概要
+- 『sketto』とは、すき間時間を活用して働きたいという従業員と、人手を必要としている店舗をマッチングするサービスです。
+- 店舗・従業員が登録することができる（新規登録・ログイン機能）
+- 店舗と従業員でチャットでの連絡が可能
+- 人手を必要としている日程登録
+- 人手を必要としている日程を検索
 
-* Ruby version
 
-* System dependencies
+# 本番環境(デプロイ先　テストアカウント＆ID)
+- デプロイ未完了。今後AWSを用いてデプロイする予定です。
 
-* Configuration
 
-* Database creation
+# 制作背景(意図)
+- 前職の飲食店で感じていた人材不足を解消できるサービスがあれば良いなと感じ開発することに決めました。
 
-* Database initialization
+- 「飲食店の現状・課題点」
+- ①顧客満足度の低下
+  →従業員の充足が足りていないことが原因で、サービスの質・サービススピード・商品の品質が低下し、顧客満足度が下がる傾向がある。結果として売り上げの低下につながる。
+- ②働く環境の劣悪化
+  →従業員が足りていなくても、顧客数は減らないために従業員が長時間の労働・休日の確保が出来ないといった働きやすい環境が確保できない。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# 工夫したポイント
+- ユーザーが使用しやすいようなわかりやすいデザイン。
 
-* Deployment instructions
+# 使用技術(開発環境)
+- Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 
-* ...
+# 課題や今後実装したい機能
+- ajaxを使用した非同期処理
+
+# DB設計
+- 

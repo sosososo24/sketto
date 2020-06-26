@@ -4,7 +4,7 @@
     <%= link_to 'Help検索', '/helps/index', class: "header__menu-list" %>
     <%= link_to 'message', '/messages/index', class: "header__menu-list" %>
     <% if user_signed_in? %>
-      <%= link_to '新規登録', '/users/sign_up', class: "header__menu-btn1" %>
+      <%= link_to '編集', edit_user_path(current_user), class: "header__menu-btn2" %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__menu-btn2' %>
     <% else%>
       <%= link_to '新規登録', '/users/sign_up', class: "header__menu-btn1" %>

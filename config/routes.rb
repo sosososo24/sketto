@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root "top#index"
   resources :users, only: [:edit, :update]
   resources :stores, only: [:edit, :update]
-  resources :groups, only: [:new, :create]
+  resources :groups, only: [:index, :new, :create, :edit, :update]
   get 'messages/index'
   get 'helps/index'
 end

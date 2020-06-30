@@ -8,8 +8,7 @@
   .chat {
     width: 1100px;
     height: 650px;
-    margin-top: 30px;
-    position: fixed;
+    margin-top: 70px;
     border-radius: 30px;
     display: flex;
   }
@@ -52,11 +51,14 @@
         background-color: #d2b48c;
         border-radius: 0 0 0 30px;
         padding-top: 20px;
-        overflow: scroll;
+        overflow: visible scroll;
         &-store {
           height: 50px;
           width: 250px;
           margin: 0 20px 20px 20px;
+        a {
+          text-decoration: none;
+        }
         }
         &-name {
           color: #696969;
@@ -98,7 +100,7 @@
     &__body {
       height: 470px;
       background-color: #ffefd5;
-      overflow: scroll;
+      overflow: visible scroll;
       .line {
         width: 360px;
         height: 100px;
@@ -149,7 +151,7 @@
       }
     &__message {
       height: 100px;
-      background-color: #ffefd5;
+      background-color: #ffe4c4;
       border-radius: 0 0 30px 0;
       display: flex;
       align-items: center;

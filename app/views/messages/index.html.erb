@@ -29,44 +29,20 @@
           </li>
         </div>
       </div>
+
       <div class="chat-side__main">
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
-        <div class="chat-side__main-store">
-          <h1 class="chat-side__main-name">ABCDEFGHI店</h1>
-          <h1 class="chat-side__main-message">まだメッセージはありません</h1>
-        </div>
+        <% current_user.groups.each do |group| %>
+          <div class="chat-side__main-store">
+            <%= link_to '#' do %>
+              <div class="chat-side__main-name">
+                <%= group.name %>
+              </div>
+              <div class="chat-side__main-message">まだメッセージはありません</div>
+            <% end %>
+          </div>
+        <% end%>
       </div>
+
     </div>
     
     <div class="chat-main">

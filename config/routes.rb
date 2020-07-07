@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   root "top#index"
   resources :users, only: [:edit, :update]
   resources :stores, only: [:edit, :update]
-  resources :groups, only: [:index, :new, :create, :edit, :update]
-  get 'messages/index'
+  resources :groups, only: [:index,:new, :create, :edit, :update] do
+    resources :messages, only: [:index, :create]
+  end
   get 'helps/index'
 end

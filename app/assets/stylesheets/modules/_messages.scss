@@ -103,8 +103,7 @@
       overflow: visible scroll;
       .line {
         width: 360px;
-        height: 100px;
-        padding-left: 40px;
+        padding-left: 80px;
         padding-top: 20px;
         &__text {
           display: flex;
@@ -121,13 +120,14 @@
           }
         }
         &__message {
-          font-size: 14px;
+          font-size: 20px;
+          word-wrap: break-word;
         }
       }
       .return-line {
         width: 360px;
-        height: 100px;
         padding-left: 40px;
+        padding-right: 20px;
         padding-top: 20px;
         margin:0 0 0 auto;
         &__text {
@@ -145,7 +145,8 @@
           }
         }
         &__message {
-          font-size: 14px;
+          font-size: 20px;
+          word-wrap: break-word;
         }
       }
       }
@@ -155,12 +156,25 @@
       border-radius: 0 0 30px 0;
       display: flex;
       align-items: center;
+      .new_message {
+        display: flex;
+      }
       &__text {
         height: 30px;
         width: 600px;
         margin-left: 70px;
         background-color: #fff5ee;
         border-radius: 5px;
+      }
+      &__mask {
+        margin-left: 6px;
+        margin-top: 3px;
+        .icon {
+          cursor: pointer;
+        }
+        input {
+          display: none;
+        }
       }
       &__btn {
         height: 30px;

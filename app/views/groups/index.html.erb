@@ -11,7 +11,6 @@
           <% elsif current_store %>
           <%= current_store.name %>
           <% else %>
-          <h1>仮</h1>
           <% end %>
           </h1>
           <li class="chat-side__header-list">
@@ -24,12 +23,11 @@
                 <%= icon('fas', 'user-cog', class: 'icon') %>
               <% end %>
             <% else %>
-              <h1>仮</h1>
             <% end %>
           </li>
         </div>
       </div>
-      
+    
       <div class="chat-side__main">
         <% if user_signed_in? %>
           <% current_user.groups.each do |group| %>
@@ -66,46 +64,18 @@
 
     </div>
     
-    
     <div class="chat-main">
 
       <div class="chat-main__header">
-        <div class="chat-main__header-title">
-          <div class="chat-main__header-store">
-            <% if user_signed_in? %>
-              <% @group.stores.each do |store| %>
-                <%= store.name %>
-              <% end %>
-            <% else %>
-              <% @group.users.each do |user| %>
-                <%= user.name %>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
       </div>
 
       <div class="chat-main__body">
-
-        <%= render @messages %>
-
       </div>
-      
 
 
       <div class="chat-main__message">
-        <%= form_for [@group, @message] do |f| %>
-          <%= f.text_field :content, class: 'chat-main__message__text', placeholder: 'type a message' %>
-          <div class="chat-main__message__mask">
-            <%= f.label :image, class: 'chat-main__message__mask-image' do %>
-              <%= icon('fas', 'image', class: 'icon') %>
-              <%= f.file_field :image, class: 'hidden' %>
-            <% end %>
-          </div>
-          <%= f.submit 'Send', class: 'chat-main__message__btn' %>
-        <% end %>
       </div>
-      
+
     </div>
 
   </div>

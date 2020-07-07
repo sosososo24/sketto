@@ -2,7 +2,7 @@
   <%= link_to image_tag("sketto.png", class:"header__logo"), "/" %>
   <div class="header__menu">
     <%= link_to 'Help検索', '/helps/index', class: "header__menu-list" %>
-    <%= link_to 'message', '/messages/index', class: "header__menu-list" %>
+    <%= link_to 'message', groups_path, class: "header__menu-list" %>
     <% if user_signed_in? %>
       <%= link_to '編集', edit_user_path(current_user), class: "header__menu-btn2" %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__menu-btn2' %>

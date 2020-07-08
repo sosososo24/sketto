@@ -94,6 +94,7 @@
 
 
       <div class="chat-main__message">
+
         <%= form_for [@group, @message] do |f| %>
           <%= f.text_field :content, class: 'chat-main__message__text', placeholder: 'type a message' %>
           <div class="chat-main__message__mask">
@@ -104,9 +105,9 @@
           </div>
           <%= f.submit 'Send', class: 'chat-main__message__btn' %>
         <% end %>
+        
       </div>
       
     </div>
-
   </div>
 </div>

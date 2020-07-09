@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     registrations: 'stores/registrations'
   }
   root "top#index"
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:index, :edit, :update]
   resources :stores, only: [:edit, :update]
   resources :groups, only: [:index,:new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]

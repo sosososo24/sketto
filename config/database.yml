@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: sketto_production
-  username: sketto
-  password: <%= ENV['SKETTO_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

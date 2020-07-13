@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_for (@helplist) do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      <%= form.date_select :date, placeholder: "" %>
+      <%= form.time_field :time, placeholder: "" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

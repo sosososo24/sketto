@@ -32,7 +32,5 @@
 - Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 
 # 課題や今後実装したい機能
-- ajaxを使用した非同期処理
-
-# DB設計
-- 
+- 検索機能の実装
+- 表示順の工夫

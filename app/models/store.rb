@@ -10,4 +10,5 @@ class Store < ApplicationRecord
   has_many :group_stores
   has_many :groups, through: :group_stores
   has_many :messages
+  has_many :helplists
 end

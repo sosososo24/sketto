@@ -2,14 +2,14 @@
   <%= link_to image_tag("sketto.png", class:"header__logo"), "/" %>
   <% if user_signed_in? %>
     <div class="header__menu">
-      <%= link_to 'Help検索', '/helps/index', class: "header__menu-list" %>
+      <%= link_to 'Help検索', helplists_path, class: "header__menu-list" %>
       <%= link_to 'message', groups_path, class: "header__menu-list" %>
         <%= link_to '編集', edit_user_path(current_user), class: "header__menu-btn2" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__menu-btn2' %>
     </div>
   <% elsif store_signed_in? %>
     <div class="header__menu">
-      <%= link_to 'Help検索', '/helps/index', class: "header__menu-list" %>
+      <%= link_to 'Help登録', helplists_path, class: "header__menu-list" %>
       <%= link_to 'message', groups_path, class: "header__menu-list" %>
       <%= link_to '店舗ログアウト', destroy_store_session_path, method: :delete, class: 'header__menu-btn3' %>
     </div>

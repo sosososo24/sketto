@@ -1,17 +1,16 @@
 class HelplistsController < ApplicationController
 
   def index
-    @helplists = Helplist.all
-    @stores = Store.all
+    @helplists = Helplist.all.order(date: "DESC")
     @helplist = Helplist.new
   end
 
   def create
     @helplist = Helplist.new(helplist_params)
     if @helplist.save
-      redirect_to helplists_path
+      redirect_to "/stores/#{current_store.id}"
     else
-      render helplists_path
+      render "/stores/#{current_store.id}"
     end
   end
 
@@ -19,10 +18,14 @@ class HelplistsController < ApplicationController
     @helplist = Helplist.find(params[:id])
     
     if @helplist.destroy
-      redirect_to helplists_path
+      redirect_to "/stores/#{current_store.id}"
     else
-      render helplists_path
+      render "/stores/#{current_store.id}"
     end
+  end
+
+  def search
+    @helplists = Helplist.search(params[:search])
   end
 
   private

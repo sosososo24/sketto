@@ -9,7 +9,7 @@
     </div>
   <% elsif store_signed_in? %>
     <div class="header__menu">
-      <%= link_to 'Help登録', helplists_path, class: "header__menu-list" %>
+      <%= link_to 'Help登録', "/stores/#{current_store.id}", class: "header__menu-list" %>
       <%= link_to 'message', groups_path, class: "header__menu-list" %>
       <%= link_to '店舗ログアウト', destroy_store_session_path, method: :delete, class: 'header__menu-btn3' %>
     </div>

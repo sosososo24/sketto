@@ -15,16 +15,6 @@
             <%= f.submit "HELP登録", class: "side_btn__btn1"%>
           </div>
         <% end %>
-      <% else %>
-        <h1 class="sidebar__body-title">日程検索</h1>
-        <%= form_tag(search_helplists_path,:method => 'get') do %>
-          <div class="search search_date">
-            <%= date_field_tag :search ,class: "search_date" %>
-          </div>
-          <div class="side_btn">
-            <%= submit_tag 'Search', :name => nil ,class: "side_btn__btn2"%>
-          </div>
-        <% end %>
       <% end %>
     </div>
   </div>

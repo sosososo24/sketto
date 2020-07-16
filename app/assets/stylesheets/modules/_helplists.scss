@@ -6,6 +6,7 @@
   display: flex;
   .sidebar {
     width: 340px;
+    height: auto;
     margin-left: 64px;
     &__body {
       width: 300px;
@@ -92,6 +93,9 @@
         padding: 8px 38px 8px 8px;
         color: #a0522d;
       }
+      .search_date {
+        margin-top: 60px;
+      }
       .side_btn {
         width: 220px;
         height: 200px;
@@ -106,10 +110,11 @@
           cursor: pointer;
         }
         &__btn2 {
-          margin-top: 20px;
           height: 42px;
-          background-color: #dcdcdc;
-          color: black;
+          width: 180px;
+          margin: 20px auto;
+          background-color: #a0522d;
+          color: whitesmoke;
           border-radius: 50px;
           cursor: pointer;
         }
@@ -119,7 +124,8 @@
 
   .help {
     width: 1020px;
-    padding-top: 30px;
+    height: auto;
+    padding-top: 40px;
     background-color: #ffefd5;
     &__title {
       height: 50px;
@@ -129,37 +135,35 @@
       line-height: 50px;
     }
     &__list {
-      width: 300px;
-      height: 400px;
+      width: 900px;
+      height: 650px;
       background-color: #DEB887	;
-      margin: 20px;
+      margin-left: 70px;
       border-radius: 30px;
       box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)!important;
       float: left;
       &-store {
         width: 270px;
         height: 30px;
-        margin: 10px auto;
+        margin: 20px auto;
+        font-size: 30px;
         text-align: center;
         font-weight: bold;
         line-height: 30px;
       }
     }
     &__list__table {
-      width: 280px;
-      height: 250px;
+      width: 800px;
+      height: 500px;
       margin: 0 auto;
       background-color: #F5DEB3;
       border-radius: 10px;
       overflow: visible scroll;
       &-data {
-        padding: 0.5em;
+        padding: 30px;
         list-style: none;
-        font-size: 14px;
+        font-size: 17px;
         &-edit {
-          text-align: end;
-          margin-right: 30px;
-          font-size: 14px;
           a {
             text-decoration: none;
             color: #FF9872;
@@ -169,7 +173,16 @@
       &-data li {
         position: relative;
         padding: 0.5em 1em 0.5em 2.3em;
-        margin-bottom:5px;
+        margin-bottom:15px;
+        display: flex;
+        margin-left: 80px;
+        .list-name {
+          width: 200px;
+          margin-right: 40px;
+        }
+        .list-data {
+          margin-right: 30px;
+        }
       }
       &-data li:after,
       &-data li:before {
@@ -193,14 +206,14 @@
       }
     }
     &__list__btn{
-      width: 250px;
+      width: 400px;
       height: 50px;
       margin: 0 auto;
       display: flex;
       &-btn1 {
-        width: 250px;
+        width: 400px;
         height: 42px;
-        margin-top: 30px;
+        margin-top: 20px;
         background-color: #a0522d;
         color: whitesmoke;
         border-radius: 50px;

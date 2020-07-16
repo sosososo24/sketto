@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   }
   root "top#index"
   resources :users, only: [:index, :edit, :update]
-  resources :stores, only: [:edit, :update]
+  resources :stores, only: [:edit, :update,:show]
   resources :groups, only: [:index,:new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
 
@@ -19,5 +19,9 @@ Rails.application.routes.draw do
       resources :messages, only: :index, defaults: { format: 'json' }
     end
   end
-  resources :helplists, only: [:index, :new, :create, :destroy, :edit]
+  resources :helplists, only: [:index, :new, :create, :destroy, :edit] do
+    collection do
+      get 'search'
+    end
+  end
 end

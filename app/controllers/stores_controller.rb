@@ -12,6 +12,11 @@ class StoresController < ApplicationController
     end
   end
 
+  def show
+    @helplists = current_store.helplists
+    @helplist = Helplist.new
+  end
+
   private
 
   def store_params

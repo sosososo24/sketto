@@ -13,7 +13,7 @@ class StoresController < ApplicationController
   end
 
   def show
-    @helplists = current_store.helplists
+    @helplists = current_store.helplists.page(params[:page]).per(10).order("date DESC")
     @helplist = Helplist.new
   end
 

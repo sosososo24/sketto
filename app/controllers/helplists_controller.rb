@@ -1,7 +1,7 @@
 class HelplistsController < ApplicationController
 
   def index
-    @helplists = Helplist.all.order(date: "DESC")
+    @helplists = Helplist.all.order(date: "DESC").page(params[:page]).per(10)
     @helplist = Helplist.new
   end
 

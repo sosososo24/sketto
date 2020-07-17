@@ -12,7 +12,7 @@
 
 
 # 本番環境(デプロイ先　テストアカウント＆ID)
-  [Sketto](http://52.199.209.14)
+- [Sketto](http://52.199.209.14)
 - テストアカウント
 - user email test.user@test.co.jp password sketto1234
 - store email test.store@test.co.jp password sketto5678
